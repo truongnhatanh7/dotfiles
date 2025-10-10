@@ -4,7 +4,9 @@ return {
   opts = {
     picker = {
       icons = {
-        diagnostics = {},
+        diagnostics = {
+          Warn = "",
+        },
       },
     },
   },
