@@ -29,10 +29,9 @@ return {
             min = vim.diagnostic.severity.ERROR,
           },
         },
-
-        inlay_hints = {
-          enabled = false, -- This is the key change
-        },
+      },
+      inlay_hints = {
+        enabled = false, -- This is the key change
       },
     },
   },
