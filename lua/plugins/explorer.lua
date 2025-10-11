@@ -9,5 +9,9 @@ return {
         },
       },
     },
+    layout = { preset = "sidebar", preview = false },
+    files = {
+      hidden = true,
+    },
   },
 }
