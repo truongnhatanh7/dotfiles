@@ -8,11 +8,22 @@ return {
           Warn = "",
         },
       },
+      files = {
+        hidden = true,
+        ignored = true,
+      },
+      sources = {
+        explorer = {
+          hidden = true,
+          ignored = true,
+        },
+      },
     },
-    layout = { preset = "sidebar", preview = false },
-    files = {
-      hidden = true,
-      ignored = true,
+    explorer = {
+      files = {
+        hidden = true,
+        ignored = true,
+      },
     },
   },
 }
