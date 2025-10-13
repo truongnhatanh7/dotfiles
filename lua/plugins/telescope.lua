@@ -6,6 +6,12 @@ return {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
     },
+    {
+      "nvim-telescope/telescope-live-grep-args.nvim",
+      -- This will not install any breaking changes.
+      -- For major updates, this must be adjusted manually.
+      version = "^1.0.0",
+    },
   },
   keys = {
     { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer search" },
@@ -59,5 +65,6 @@ return {
       },
     })
     telescope.load_extension("fzf")
+    telescope.load_extension("live_grep_args")
   end,
 }
