@@ -16,6 +16,12 @@ return {
           },
         },
 
+        virtual_lines = {
+          severity = {
+            min = vim.diagnostic.severity.ERROR,
+          },
+        },
+
         -- Filter signs to only show Errors
         signs = {
           severity = {
@@ -26,6 +32,18 @@ return {
         -- Filter underline to only show Errors
         underline = {
           severity = {
+            min = vim.diagnostic.severity.ERROR,
+          },
+        },
+
+        float = {
+          sseverity = {
+            min = vim.diagnostic.severity.ERROR,
+          },
+        },
+
+        qflist = {
+          sseverity = {
             min = vim.diagnostic.severity.ERROR,
           },
         },
