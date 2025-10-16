@@ -47,6 +47,8 @@ return {
             min = vim.diagnostic.severity.ERROR,
           },
         },
+
+        jk,
       },
       inlay_hints = {
         enabled = false, -- This is the key change
