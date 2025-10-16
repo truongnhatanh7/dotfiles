@@ -1,7 +1,6 @@
 return {
   {
     "nvim-neotest/neotest",
-    dev = true,
     dependencies = {
       "fredrikaverpil/neotest-golang",
     },
