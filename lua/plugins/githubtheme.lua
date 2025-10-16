@@ -3,9 +3,7 @@ return {
   name = "github-theme",
   config = function()
     require("github-theme").setup({
-      options = {
-        transparent = true,
-      },
+      options = {},
     })
   end,
 }
