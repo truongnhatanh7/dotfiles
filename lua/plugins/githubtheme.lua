@@ -3,7 +3,12 @@ return {
   name = "github-theme",
   config = function()
     require("github-theme").setup({
-      options = {},
+      options = {
+        styles = {
+          functions = "bold",
+          keywords = "italic",
+        },
+      },
     })
   end,
 }
