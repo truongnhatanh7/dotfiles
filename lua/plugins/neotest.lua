@@ -12,7 +12,7 @@ return {
         -- Number of workers to parse files concurrently.
         -- A value of 0 automatically assigns number based on CPU.
         -- Set to 1 if experiencing lag.
-        -- concurrent = 1,
+        concurrent = 1,
       },
       running = {
         -- Run tests concurrently when an adapter provides multiple commands to run.

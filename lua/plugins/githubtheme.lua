@@ -8,6 +8,7 @@ return {
           functions = "bold",
           keywords = "italic",
         },
+        transparent = true,
       },
     })
   end,

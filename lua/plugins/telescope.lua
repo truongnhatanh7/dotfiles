@@ -39,7 +39,7 @@ return {
             "%.venv/", -- Escaping the dot is necessary for Lua regex
             "venv/",
             "__pycache__/",
-            ".git",
+            ".git/",
             "dist/",
           },
           additional_args = function(_)
@@ -53,7 +53,7 @@ return {
             "%.venv/", -- Escaping the dot is necessary for Lua regex
             "venv/",
             "__pycache__/",
-            ".git",
+            ".git/",
             "dist/",
           },
           hidden = true,
