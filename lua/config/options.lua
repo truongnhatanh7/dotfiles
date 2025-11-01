@@ -6,5 +6,3 @@ vim.lsp.set_log_level("off")
 -- ~/.config/nvim/lua/config/options.lua
 -- This sets custom Neovim options
 local opt = vim.opt
-
-opt.guicursor = "a:blinkwait700-blinkoff250-blinkon250"
