@@ -29,9 +29,9 @@ require("lazy").setup({
     -- have outdated releases, which may break your Neovim install.
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
-    colorscheme = "github_dark_dimmed",
+    colorscheme = "vscode",
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "vscode", "tokyonight", "habamax" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
