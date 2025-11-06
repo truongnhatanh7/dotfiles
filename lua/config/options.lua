@@ -6,3 +6,4 @@ vim.lsp.set_log_level("off")
 -- ~/.config/nvim/lua/config/options.lua
 -- This sets custom Neovim options
 local opt = vim.opt
+opt.scrolloff = 15
