@@ -17,20 +17,63 @@ return {
     -- Register opencode keymaps with which-key under <leader>o
     local ok, wk = pcall(require, "which-key")
     if ok then
-      wk.register({
-        o = {
-          name = "Opencode",
-          a = { function() require("opencode").ask("@this: ", { submit = true }) end, "Ask opencode" },
-          x = { function() require("opencode").select() end, "Execute opencode action…" },
-          p = { function() require("opencode").prompt("@this") end, "Add to opencode" },
-          t = { function() require("opencode").toggle() end, "Toggle opencode" },
-          u = { function() require("opencode").command("session.half.page.up") end, "Half page up" },
-          d = { function() require("opencode").command("session.half.page.down") end, "Half page down" },
-        }
-      }, { prefix = "<leader>" })
+      wk.add({
+        { "<leader>o", group = "Opencode", mode = "n" },
+        {
+          "<leader>oa",
+          function()
+            require("opencode").ask("@this: ", { submit = true })
+          end,
+          desc = "Ask opencode",
+          mode = "n",
+        },
+        {
+          "<leader>ox",
+          function()
+            require("opencode").select()
+          end,
+          desc = "Execute opencode action…",
+          mode = "n",
+        },
+        {
+          "<leader>op",
+          function()
+            require("opencode").prompt("@this")
+          end,
+          desc = "Add to opencode",
+          mode = "n",
+        },
+        {
+          "<leader>ot",
+          function()
+            require("opencode").toggle()
+          end,
+          desc = "Toggle opencode",
+          mode = "n",
+        },
+        {
+          "<leader>ou",
+          function()
+            require("opencode").command("session.half.page.up")
+          end,
+          desc = "Half page up",
+          mode = "n",
+        },
+        {
+          "<leader>od",
+          function()
+            require("opencode").command("session.half.page.down")
+          end,
+          desc = "Half page down",
+          mode = "n",
+        },
+      })
     end
     -- You may want these if you stick with the opinionated "<C-a>" and "<C-x>" above — otherwise consider "<leader>o".
     vim.keymap.set("n", "+", "<C-a>", { desc = "Increment", noremap = true })
     vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement", noremap = true })
+    vim.keymap.set("x", "<leader>oa", function()
+      require("opencode").ask("@this: ", { submit = true })
+    end, { desc = "Ask opencode (visual)" })
   end,
 }
