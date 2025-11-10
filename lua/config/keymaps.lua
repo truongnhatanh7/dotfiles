@@ -3,3 +3,5 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>sz", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+
+vim.keymap.set("n", "<leader>W", ":wall<CR>", { desc = "Save all buffers" })
