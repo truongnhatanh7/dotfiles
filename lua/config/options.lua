@@ -7,3 +7,5 @@ vim.lsp.set_log_level("off")
 -- This sets custom Neovim options
 local opt = vim.opt
 opt.scrolloff = 15
+
+vim.o.cursorline = false
