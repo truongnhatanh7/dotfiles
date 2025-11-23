@@ -8,25 +8,25 @@ return {
         "<leader>Tf",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 0, LazyVim.root.get(), "float")
+          require("toggleterm").toggle(count, 0, vim.fn.getcwd(), "float")
         end,
-        desc = "ToggleTerm (float root_dir)",
+        desc = "ToggleTerm (float cwd)",
       },
       {
         "<leader>Th",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 15, LazyVim.root.get(), "horizontal")
+          require("toggleterm").toggle(count, 15, vim.fn.getcwd(), "horizontal")
         end,
-        desc = "ToggleTerm (horizontal root_dir)",
+        desc = "ToggleTerm (horizontal cwd)",
       },
       {
         "<leader>Tv",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, vim.o.columns * 0.4, LazyVim.root.get(), "vertical")
+          require("toggleterm").toggle(count, vim.o.columns * 0.4, vim.fn.getcwd(), "vertical")
         end,
-        desc = "ToggleTerm (vertical root_dir)",
+        desc = "ToggleTerm (vertical cwd)",
       },
       {
         "<leader>Tn",
@@ -41,9 +41,16 @@ return {
       {
         "<leader>Tt",
         function()
-          require("toggleterm").toggle(1, 100, LazyVim.root.get(), "tab")
+          require("toggleterm").toggle(1, 100, vim.fn.getcwd(), "tab")
         end,
-        desc = "ToggleTerm (tab root_dir)",
+        desc = "ToggleTerm (tab cwd)",
+      },
+      {
+        "<leader>Tq",
+        function()
+          require("toggleterm").toggleAll()
+        end,
+        desc = "Toggle all terminals",
       },
     },
     opts = {
@@ -69,8 +76,9 @@ return {
       insert_mappings = true, -- whether or not the open mapping applies in insert mode
       terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
       persist_size = true,
-      direction = "horizontal" or "vertical" or "window" or "float",
-      -- direction = "vertical",
+      autochdir = true,
+      auto_scroll = false,
+      direction = "horizontal",
       close_on_exit = true, -- close the terminal window when the process exits
       -- shell = vim.o.shell, -- change the default shell
       -- This field is only relevant if direction is set to 'float'
