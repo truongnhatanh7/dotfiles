@@ -9,3 +9,5 @@ local opt = vim.opt
 opt.scrolloff = 15
 
 vim.o.cursorline = false
+vim.o.smoothscroll = false
+vim.g.snacks_animate = true
